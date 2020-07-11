@@ -36,10 +36,13 @@ img, button {
 /* home botom */
 #home-bottom {
 	padding-top: 1rem;
-	position: fixed;
+	position: sticky;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	background-color: #e6e6e6;
 	border-top: 2px solid #999;
+}
+#footer {
+	background-color: #e6e6e6;
 }
