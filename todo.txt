@@ -1,0 +1,22 @@
+todo:
+
+front end:
+	clean up UI
+
+backend:
+	- add database
+	- setup account system
+
+views:
+	settings for account
+	- delete account
+	- delete custom status list items
+
+	group settings
+	- leave group
+	- search group
+	- rename group
+
+bugs:
+	visual
+	- bottom fixed footer bounces with scroll
