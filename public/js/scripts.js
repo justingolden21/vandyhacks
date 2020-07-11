@@ -10,6 +10,11 @@ $( ()=> {
 		$('#account-modal').modal('show');
 	});
 
+	$('#update-btn').click( ()=>{
+		let status = $('#status-select').val();
+		updateStatus(status);
+	});
+
 	// ----------------
 
 	const AVAIL_COLOR_CLASSES = {
