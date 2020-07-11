@@ -13,35 +13,27 @@
 </head>
 <body>
 
+	<h3 class="text-center m-3">StatusApp</h3>
+
+
 	<!-- top row -->
-
-	<div class="row border-bottom text-center">
-		<div class="col-4">
-			<h5 class="p-2 my-2"><i class="fas fa-home"></i> Home</h5>
-		</div>
-		<div class="col-4">
-			<h3 class="p-2 my-2">StatusApp</h3>	
-		</div>
-		<div class="col-4">
-			<button id="logout-btn" class="btn btn-secondary p-2 my-2">Logout <i class="fas fa-sign-out-alt"></i></button>
-		</div>
-	</div>
-
-	<!-- profile -->
 
 	<div class="row">
 		<div class="col-6">
+		
+			<h5 class=" text-center mx-2"><i class="fas fa-home"></i> Home</h5>
 
 		</div>
 		<div class="col-6">
 			
-			<div id="profile-div" tabindex="1" class="text-right mr-4 border border-secondary rounded d-block p-2">
+			<button id="sign-out-btn" onclick="signout()" class="btn btn-secondary">Logout <i class="fas fa-sign-out-alt"></i></button>
+		
+			<div class="text-right mr-4 border border-secondary rounded d-block p-2">
 				<span><b>John Doe</b></span>
 				<br>
 				😎 <i>Chilling in my room...</i>
 				<br>
-				<div class="user-dot dot green"></div>
-				<span class="user-availability-text">Available</span>
+				<div class="dot green"></div> Available
 			</div>
 
 		</div>
@@ -49,7 +41,7 @@
 
 	<!-- groups -->
 
-	<div class="row p-2">
+	<div class="row p-2 m-2">
 		<div class="col-4">
 			<b>Group Name</b>
 		</div>
@@ -58,9 +50,9 @@
 		</div>
 	</div>
 
-	<div class="row p-2 border border-secondary bg-light">
+	<div class="row p-2 m-2 border">
 		<div class="col-4">
-			<button class="btn btn-outline-dark">Roomies</button>
+			<button class="btn">Roomies</button>
 		</div>
 		<div class="col-4">
 			<div class="dot green"></div>
@@ -75,9 +67,9 @@
 		</div>
 	</div>
 
-	<div class="row pt-2 border border-primary bg-white">
+	<div class="row p-2 m-2 border">
 		<div class="col-4">
-			<button class="btn btn-outline-dark">Hackathon Buddies</button>
+			<button class="btn">Hackathon Buddies</button>
 		</div>
 		<div class="col-4">
 			<div class="dot green"></div>
@@ -90,27 +82,20 @@
 		</div>
 
 		<!-- expanded group -->
-		<div class="col-12 py-2">
-			<button class="btn btn-sm"><i class="fas fa-cog"></i> Settings</button>
-			<!-- leave group can do in settings -->
-			<!-- | <button class="btn btn-sm"><i class="fas fa-arrow-left"></i> Leave Group</button> -->
-			| <button class="btn btn-sm"><i class="fas fa-search"></i> Search Group</button>
-			| <button class="btn btn-sm"><i class="fas fa-envelope"></i> Invite</button>
-		</div>
-		<div class="col-12 border py-2">
+		<div class="col-12 border">
 			<b>Anne</b> | <div class="dot green"></div> Available | 😊 <i>Just Chillin </i> | <small>2hrs ago</small>
 		</div>
-		<div class="col-12 border py-2">
+		<div class="col-12 border">
 			<b>Mark</b> | <div class="dot yellow"></div> Kind of Busy | 🤔 <i>Working on UI</i> | <small>20min ago</small>
 		</div>
-		<div class="col-12 border py-2">
+		<div class="col-12 border">
 			<b>Thomas</b> | <div class="dot purple"></div> Away | 😴 <i>Sleeping</i> | <small>5hrs ago</small>
 		</div>
 	</div>
 
-	<div class="row p-2 border border-secondary bg-light">
+	<div class="row p-2 m-2 border">
 		<div class="col-4">
-			<button class="btn btn-outline-dark">Family</button>
+			<button class="btn">Family</button>
 		</div>
 		<div class="col-4">
 			<div class="dot yellow"></div>
@@ -121,9 +106,9 @@
 			Mom, Dad, Sis
 		</div>
 	</div>
-	<div class="row p-2 border border-secondary bg-light">
+	<div class="row p-2 m-2 border">
 		<div class="col-4">
-			<button class="btn btn-outline-dark">Family</button>
+			<button class="btn">Family</button>
 		</div>
 		<div class="col-4">
 			<div class="dot yellow"></div>
@@ -134,9 +119,9 @@
 			Mom, Dad, Sis
 		</div>
 	</div>
-	<div class="row p-2 border border-secondary bg-light">
+	<div class="row p-2 m-2 border">
 		<div class="col-4">
-			<button class="btn btn-outline-dark">Family</button>
+			<button class="btn">Family</button>
 		</div>
 		<div class="col-4">
 			<div class="dot yellow"></div>
@@ -147,21 +132,18 @@
 			Mom, Dad, Sis
 		</div>
 	</div>
-
-	<br><br><br><br>
-	<br><br><br><br>
 
 	<!-- sticky bottom -->
 
-	<div id="home-bottom" class="row p-2">
+	<div id="home-bottom" class="row">
 		<div class="col-4">
-			<button class="btn btn-secondary w-100 h-100">Search <br><i class="fas fa-search"></i></button>
+			<button class="btn btn-secondary w-100">Search <br><i class="fas fa-search"></i></button>
 		</div>
 		<div class="col-4">
-			<button class="btn btn-secondary w-100 h-100">Create Group <br><i class="fas fa-plus"></i></button>
+			<button class="btn btn-secondary w-100">Create Group <br><i class="fas fa-plus"></i></button>
 		</div>
 		<div class="col-4">
-			<button class="btn btn-secondary w-100 h-100">Join Group <br><i class="fas fa-arrow-right"></i></button>
+			<button class="btn btn-secondary w-100">Join Group <br><i class="fas fa-arrow-right"></i></button>
 		</div>
 	</div>
 
@@ -177,9 +159,12 @@
 				<div class="modal-body">
 
 					<p class="text-center">Use StatusApp to do the stuff.</p>
-
-					<button class="btn btn-lg btn-primary d-block m-3 mx-auto">Sign in <i class="fas fa-sign-in-alt"></i></button>
-					<button class="btn btn-lg btn-primary d-block m-3 mx-auto">Sign up <i class="fas fa-user-plus"></i></button>
+					
+					<p id="toast" class="text-center"></p>
+					<button id="sign-in-btn" onclick="signin()" class="btn btn-lg btn-primary d-block m-3 mx-auto">
+						Sign in <i class="fas fa-sign-in-alt"></i>
+					</button>
+					<button id="sign-up-btn" class="btn btn-lg btn-primary d-block m-3 mx-auto">Sign up <i class="fas fa-user-plus"></i></button>
 
 				</div>
 				<div class="modal-footer">
@@ -204,7 +189,6 @@
 					<label for="name-input">Name</label>
 					<input id="name-input" class="form-control" type="text" value="John Doe">
 
-					<br>
 					<label for="status-select" class="mt-4 mr-3">Status</label>
 					<select id="status-select" class="form-control w-50 d-inline mr-3">
 						<option>Chilling in my room...</option>
@@ -214,7 +198,6 @@
 					</select>
 					<button class="btn btn-secondary d-inline"><i class="fas fa-plus"></i></button>
 
-					<br>
 					<label for="emoji-select" class="mt-4 mr-3">Emoji</label>
 					<select id="emoji-select" class="form-control w-50 d-inline">
 						<option>😎</option>
@@ -225,7 +208,7 @@
 
 					<br>
 					<label for="availability-select" class="mt-4 mr-3">Availability</label>
-					<div class="user-dot dot green"></div>
+					<div class="dot green"></div>
 					<select id="availability-select" class="form-control w-50 d-inline">
 						<option value="avail">Available</option>
 						<option value="kinda">Kind of Busy</option>
@@ -245,6 +228,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 	<script src="js/scripts.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/signin.js"></script>
 
 	<!-- The core Firebase JS SDK is always required and must be listed first -->
 	<script src="/__/firebase/7.16.0/firebase-app.js"></script>
@@ -252,7 +237,12 @@
 	<!-- TODO: Add SDKs for Firebase products that you want to use
 		https://firebase.google.com/docs/web/setup#available-libraries -->
 	<script src="/__/firebase/7.16.0/firebase-analytics.js"></script>
-
+	<!-- update the version number as needed -->
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/7.16.0/firebase-auth.js"></script>
+    <script defer src="/__/firebase/7.16.0/firebase-database.js"></script>
+    <script defer src="/__/firebase/7.16.0/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/7.16.0/firebase-storage.js"></script>
 	<!-- Initialize Firebase -->
 	<script src="/__/firebase/init.js"></script>
 </body>

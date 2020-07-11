@@ -1,6 +1,6 @@
 $( ()=> {
 
-	$('#logout-btn').click( ()=> {
+	$('#sign-out-btn').click( ()=> {
 		$('#signin-modal').modal('show');
 	});
 
