@@ -1,6 +1,14 @@
 $( ()=> {
-	// $('#signin-modal').modal('show');
-	// $('#account-modal').modal('show');
+
+	$('#logout-btn').click( ()=> {
+		$('#signin-modal').modal('show');
+	});
+
+	$('#profile-div').click( ()=> {
+		$('#account-modal').modal('show');
+	});
+
+	// ----------------
 
 	const AVAIL_COLOR_CLASSES = {
 		avail: 'green',
