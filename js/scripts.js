@@ -1,6 +1,6 @@
 $( ()=> {
 	// $('#signin-modal').modal('show');
-	$('#account-modal').modal('show');
+	// $('#account-modal').modal('show');
 
 	const AVAIL_COLOR_CLASSES = {
 		avail: 'green',

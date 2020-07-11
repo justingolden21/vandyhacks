@@ -32,3 +32,14 @@ img, button {
 .dot.purple {
 	background-color: #60f;
 }
+
+/* home botom */
+#home-bottom {
+	padding-top: 1rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #e6e6e6;
+	border-top: 2px solid #999;
+}
