@@ -1,4 +1,5 @@
 let user, signedIn = false;
+// console.log(firebase.auth);
 
 // https://firebase.google.com/docs/auth/web/google-signin
 function signin() {
