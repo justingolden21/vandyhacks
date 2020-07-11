@@ -2,6 +2,8 @@ todo:
 
 front end:
 	clean up UI
+	make groups into accordion
+	make toast and toast function
 
 backend:
 	- add database

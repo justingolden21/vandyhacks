@@ -1,4 +1,5 @@
 /* reset */
+
 img, button {
 	-webkit-user-select: none; /* Safari */
 	-moz-user-select: none; /* Firefox */
@@ -12,7 +13,22 @@ img, button {
 	background: #e6e6e6;
 }
 
+/* general */
+.btn-secondary {
+	background-color: #789;
+}
+
+/* top */
+#toast-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 1rem;
+	z-index: 99;
+}
+
 /* dots */
+
 .dot {
 	display: inline-block;
 	border-radius: 50%;
@@ -33,16 +49,18 @@ img, button {
 	background-color: #60f;
 }
 
-/* home botom */
+/* bottom */
+
 #home-bottom {
-	padding-top: 1rem;
+	padding-top: 0rem;
 	position: sticky;
 	left: 0;
 	bottom: 0;
 	width: 100%;
 	background-color: #e6e6e6;
-	border-top: 2px solid #999;
+	/*border-top: 2px solid #999;*/
 }
+
 #footer {
 	background-color: #e6e6e6;
 }
