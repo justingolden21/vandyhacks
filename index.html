@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 
-	<title>Vandyhacks</title>
+	<title>StatusApp</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,78 @@
 </head>
 <body>
 
-	<h3>Vandyhacks</h3>
+	<div id="signin-modal" class="modal fade">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title"><i class="fas fa-user"></i> Sign in / Sign up</h3>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+
+					<p class="text-center">Use StatusApp to do the stuff.</p>
+
+					<button class="btn btn-lg btn-primary d-block m-3 mx-auto">Sign in <i class="fas fa-sign-in-alt"></i></button>
+					<button class="btn btn-lg btn-primary d-block m-3 mx-auto">Sign up <i class="fas fa-user-plus"></i></button>
+
+				</div>
+				<div class="modal-footer">
+					<p class="text-right m-3">V. 1.0.0</p>
+					<button class="btn btn-secondary m-3">Help <i class="fas fa-question"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="account-modal" class="modal fade">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3 class="modal-title"><i class="fas fa-user"></i> Status</h3>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				<div class="modal-body">
+
+					<p class="text-center">Update your status and stuff.</p>
+
+					<label for="name-input">Name</label>
+					<input id="name-input" class="form-control" type="text" value="John Doe">
+
+					<label for="status-select" class="mt-4 mr-3">Status</label>
+					<select id="status-select" class="form-control w-50 d-inline mr-3">
+						<option>Chilling in my room...</option>
+						<option>Studying</option>
+						<option>Working</option>
+						<option>Sleeping</option>
+					</select>
+					<button class="btn btn-secondary d-inline"><i class="fas fa-plus"></i></button>
+
+					<label for="emoji-select" class="mt-4 mr-3">Emoji</label>
+					<select id="emoji-select" class="form-control w-50 d-inline">
+						<option>😎</option>
+						<option>😊</option>
+						<option>😃</option>
+						<option>😄</option>
+					</select>
+
+					<br>
+					<label for="availability-select" class="mt-4 mr-3">Availability</label>
+					<div class="dot green"></div>
+					<select id="availability-select" class="form-control w-50 d-inline">
+						<option value="avail">Available</option>
+						<option value="kinda">Kind of Busy</option>
+						<option value="busy">Busy</option>
+						<option value="away">Away</option>
+					</select>
+
+				</div>
+				<div class="modal-footer">
+					<button class="btn btn-danger m-3">Discard <i class="fas fa-times"></i></button>
+					<button class="btn btn-success m-3">Update <i class="fas fa-check"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
