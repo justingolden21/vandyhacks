@@ -19,6 +19,10 @@ $( ()=> {
 
 	$('#availability-select').change( ()=> {
 		let val = $('#availability-select').val();
-		$('.dot').removeClass('red yellow green purple').addClass(AVAIL_COLOR_CLASSES[val]);
+		$('.user-dot.dot').removeClass('red yellow green purple').addClass(AVAIL_COLOR_CLASSES[val]);
+
+		let txt = $('#availability-select').children('option:selected').html();
+		console.log(txt);
+		$('.user-availability-text').html(txt);
 	});
 });
