@@ -1,0 +1,104 @@
+/* reset */
+
+img, button {
+	-webkit-user-select: none; /* Safari */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+/Edge */
+	user-select: none; /* Standard */
+}
+::-moz-selection {
+	background: #e6e6e6;
+}
+::selection {
+	background: #e6e6e6;
+}
+
+/* general */
+.btn-secondary {
+	background-color: #789;
+}
+
+/* top */
+#toast-container {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 1rem;
+	z-index: 99;
+}
+
+/* dots */
+
+.dot {
+	display: inline-block;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	margin-right: 0.25rem;
+}
+.dot.red {
+	background-color: #903;
+}
+.dot.yellow {
+	background-color: #cc0;
+}
+.dot.green {
+	background-color: #093;
+}
+.dot.purple {
+	background-color: #60f;
+}
+
+/* bottom */
+
+#home-bottom {
+	padding-top: 0rem;
+	position: sticky;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #e6e6e6;
+	/*border-top: 2px solid #999;*/
+}
+
+#footer {
+	background-color: #e6e6e6;
+}
+
+#profile-div { 
+    cursor: pointer;
+    
+    
+}
+
+#logout-btn {
+    background-color: white;
+    color: black;
+}
+
+body {
+    /* background-color: #181818; */
+    background-color: #1E1E1E;
+    color: white;
+
+
+}
+
+.col-6 {
+    margin-top: 10px;
+}
+
+
+#website-logo {
+    color: #6b98c2;
+}
+
+#navbar {
+    height: 62px;
+    background-color: #202020;
+}
+
+.border-bottom {
+    border-color: #383838 !important;
+}
+
