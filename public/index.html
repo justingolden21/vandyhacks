@@ -34,7 +34,7 @@
 
 	<div id="navbar"" class="row border-bottom text-center">
 		<div class="col-4">
-			<h5 class="p-2 my-2"><i class="fas fa-home"></i> Home</h5>
+			<!-- <h5 class="p-2 my-2"><i class="fas fa-home"></i> Home</h5> -->
 		</div>
 		<div class="col-4">
 			<h3 id="website-logo" class="p-2 my-2">StatusApp</h3>	
@@ -66,104 +66,109 @@
 
 	<!-- groups -->
 
-	<div class="row p-2">
-		<div class="col-4">
-			<b>Group Name</b>
-		</div>
-		<div class="col-8">
-			<b>Quick Look</b>
-		</div>
-	</div>
+    <div style="color: white; background-color: #333333;">
+        <!-- <div class="row p-2">
+            <div class="col-4">
+                <b>Group Name</b>
+            </div>
+            <div class="col-8">
+                <b>Quick Look</b>
+            </div>
+        </div> -->
+    
+        <div class="row p-2 border border-secondary  bg-group">
+            <div class="col-4">
+                <button class="btn btn-outline-dark">Roomies</button>
+            </div>
+            <div class="col-4">
+                <div class="dot green"></div>
+                <div class="dot green"></div>
+                <div class="dot green"></div>
+                <div class="dot yellow"></div>
+                <div class="dot red"></div>
+                <div class="dot red"></div>
+            </div>
+            <div class="col-4">
+                John Doe, Anne, Bob, Mark, Joe
+            </div>
+        </div>
+    
+        <div class="row pt-2 border border-primary ">
+            <div class="col-4">
+                <button class="btn btn-outline-dark">Hackathon Buddies</button>
+            </div>
+            <div class="col-4">
+                <div class="dot green"></div>
+                <div class="dot yellow"></div>
+                <div class="dot red"></div>
+                <div class="dot purple"></div>
+            </div>
+            <div class="col-4">
+                Anne, Mark, Thomas
+            </div>
+    
+            <!-- expanded group -->
+            <div class="col-12 py-2">
+                <button class="btn btn-sm"><i class="fas fa-cog"></i> Settings</button>
+                <!-- leave group can do in settings -->
+                <!-- | <button class="btn btn-sm"><i class="fas fa-arrow-left"></i> Leave Group</button> -->
+                | <button class="btn btn-sm"><i class="fas fa-search"></i> Search Group</button>
+                | <button class="btn btn-sm"><i class="fas fa-envelope"></i> Invite</button>
+            </div>
+            <div class="col-12  p-3 ml-4">
+                <b>Anne</b> | <div class="dot green"></div> Available | 😊 <i>Just Chillin </i> | <small>2hrs ago</small>
+            </div>
+            <div class="col-12  p-3 ml-4">
+                <b>Mark</b> | <div class="dot yellow"></div> Kind of Busy | 🤔 <i>Working on UI</i> | <small>20min ago</small>
+            </div>
+            <div class="col-12  p-3 ml-4">
+                <b>Thomas</b> | <div class="dot purple"></div> Away | 😴 <i>Sleeping</i> | <small>5hrs ago</small>
+            </div>
+        </div>
+    
+        <div class="row p-2 border border-secondary bg-light">
+            <div class="col-4">
+                <button class="btn btn-outline-dark">Family</button>
+            </div>
+            <div class="col-4">
+                <div class="dot yellow"></div>
+                <div class="dot yellow"></div>
+                <div class="dot red"></div>
+            </div>
+            <div class="col-4">
+                Mom, Dad, Sis
+            </div>
+        </div>
+        <div class="row p-2 border border-secondary bg-light">
+            <div class="col-4">
+                <button class="btn btn-outline-dark">Family</button>
+            </div>
+            <div class="col-4">
+                <div class="dot yellow"></div>
+                <div class="dot yellow"></div>
+                <div class="dot red"></div>
+            </div>
+            <div class="col-4">
+                Mom, Dad, Sis
+            </div>
+        </div>
+        <div class="row p-2 border border-secondary bg-light">
+            <div class="col-4">
+                <button class="btn btn-outline-dark">Family</button>
+            </div>
+            <div class="col-4">
+                <div class="dot yellow"></div>
+                <div class="dot yellow"></div>
+                <div class="dot red"></div>
+            </div>
+            <div class="col-4">
+                Mom, Dad, Sis
+            </div>
+        </div>
+    </div>
 
-	<div class="row p-2 border border-secondary bg-light">
-		<div class="col-4">
-			<button class="btn btn-outline-dark">Roomies</button>
-		</div>
-		<div class="col-4">
-			<div class="dot green"></div>
-			<div class="dot green"></div>
-			<div class="dot green"></div>
-			<div class="dot yellow"></div>
-			<div class="dot red"></div>
-			<div class="dot red"></div>
-		</div>
-		<div class="col-4">
-			John Doe, Anne, Bob, Mark, Joe
-		</div>
-	</div>
 
-	<div class="row pt-2 border border-primary bg-white">
-		<div class="col-4">
-			<button class="btn btn-outline-dark">Hackathon Buddies</button>
-		</div>
-		<div class="col-4">
-			<div class="dot green"></div>
-			<div class="dot yellow"></div>
-			<div class="dot red"></div>
-			<div class="dot purple"></div>
-		</div>
-		<div class="col-4">
-			Anne, Mark, Thomas
-		</div>
-
-		<!-- expanded group -->
-		<div class="col-12 py-2">
-			<button class="btn btn-sm"><i class="fas fa-cog"></i> Settings</button>
-			<!-- leave group can do in settings -->
-			<!-- | <button class="btn btn-sm"><i class="fas fa-arrow-left"></i> Leave Group</button> -->
-			| <button class="btn btn-sm"><i class="fas fa-search"></i> Search Group</button>
-			| <button class="btn btn-sm"><i class="fas fa-envelope"></i> Invite</button>
-		</div>
-		<div class="col-12 border p-3 ml-4">
-			<b>Anne</b> | <div class="dot green"></div> Available | 😊 <i>Just Chillin </i> | <small>2hrs ago</small>
-		</div>
-		<div class="col-12 border p-3 ml-4">
-			<b>Mark</b> | <div class="dot yellow"></div> Kind of Busy | 🤔 <i>Working on UI</i> | <small>20min ago</small>
-		</div>
-		<div class="col-12 border p-3 ml-4">
-			<b>Thomas</b> | <div class="dot purple"></div> Away | 😴 <i>Sleeping</i> | <small>5hrs ago</small>
-		</div>
-	</div>
-
-	<div class="row p-2 border border-secondary bg-light">
-		<div class="col-4">
-			<button class="btn btn-outline-dark">Family</button>
-		</div>
-		<div class="col-4">
-			<div class="dot yellow"></div>
-			<div class="dot yellow"></div>
-			<div class="dot red"></div>
-		</div>
-		<div class="col-4">
-			Mom, Dad, Sis
-		</div>
-	</div>
-	<div class="row p-2 border border-secondary bg-light">
-		<div class="col-4">
-			<button class="btn btn-outline-dark">Family</button>
-		</div>
-		<div class="col-4">
-			<div class="dot yellow"></div>
-			<div class="dot yellow"></div>
-			<div class="dot red"></div>
-		</div>
-		<div class="col-4">
-			Mom, Dad, Sis
-		</div>
-	</div>
-	<div class="row p-2 border border-secondary bg-light">
-		<div class="col-4">
-			<button class="btn btn-outline-dark">Family</button>
-		</div>
-		<div class="col-4">
-			<div class="dot yellow"></div>
-			<div class="dot yellow"></div>
-			<div class="dot red"></div>
-		</div>
-		<div class="col-4">
-			Mom, Dad, Sis
-		</div>
-	</div>
+	
 
 	<br><br><br><br>
 	<br><br><br><br>
