@@ -1,5 +1,5 @@
 const app = firebase.app();
-const db = firebase.firestore();   
+const db = firebase.firestore();
 // console.log(firebase);
 
 function getData(user) {
@@ -15,17 +15,25 @@ function getData(user) {
 	});
 }
 
-function updateStatus(st) {
+function updateStatus(newName, newStatus) {
     let user = firebase.auth().currentUser;
-    console.log(user);
-    console.log(user.uid);
-    createUser();
-    // db.collection('users').doc(user.uid).update({status: st});
+
+    db.collection('users').doc(user.uid).update({
+        name: newName
+    });
+
+        
 }
 
-function createUser() {
+$('#sign-in-btn').click( () => {
     let user = firebase.auth().currentUser;
-    console.log(user);
-    console.log(user.uid);
-    db.collection('users').doc(user.uid).set({name: 'Joe'});
-}
+    let userUid = db.collection('users').doc(user.uid);
+    if(userUid != user.uid) {
+        db.collection('users').doc(user.uid).set({
+            name: user.displayName,
+            status: ["Chilling in my room", "Studying", "Working", "Sleeping"],
+            emoji: ["😎", "😊", "😃", "😄"],
+            availability: ["Available", "Kind of Budy", "Busy", "Away"],
+        });
+    }
+});
