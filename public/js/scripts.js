@@ -12,7 +12,8 @@ $( ()=> {
 
 	$('#update-btn').click( ()=>{
 		let status = $('#status-select').val();
-		updateStatus(status);
+		let name = $('#name-input').val();
+		updateStatus(name, status);
 	});
 
 	// ----------------
