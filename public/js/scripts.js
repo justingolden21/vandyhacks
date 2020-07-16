@@ -11,9 +11,11 @@ $( ()=> {
 	});
 
 	$('#update-btn').click( ()=>{
-		let status = $('#status-select').val();
 		let name = $('#name-input').val();
-		updateStatus(name, status);
+		let status = $('#status-select').val();
+		let emoji = $('#emoji-select').val();
+		let availability = $('#availabilty-select').val();
+		updateStatus(name, status, emoji, availability);
 	});
 
 	// ----------------

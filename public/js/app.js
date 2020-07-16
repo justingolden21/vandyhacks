@@ -15,13 +15,19 @@ function getData(user) {
 	});
 }
 
-function updateStatus(newName, newStatus) {
+function updateStatus(newName, newStatus, newEmoji, newAvailability) {
     let user = firebase.auth().currentUser;
+
+    $('.name').html('<b>' + newName + '</bi>');
+    $('.status').html('<i>' + newStatus + '</i>');
+    $('.emoji').html(newEmoji);
+    $('.availability').html(newAvailability);
 
     db.collection('users').doc(user.uid).update({
         name: newName
     });
 
+    
         
 }
 
@@ -36,4 +42,8 @@ $('#sign-in-btn').click( () => {
             availability: ["Available", "Kind of Budy", "Busy", "Away"],
         });
     }
+
+    $('.name').html("<b>" + user.displayName + "</b>");
+    $('#name-input').val(user.displayName);
+
 });
