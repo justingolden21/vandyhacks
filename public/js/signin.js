@@ -1,5 +1,4 @@
 let user;
-const auth = firebase.auth();
 
 $('#sign-in-btn').click(signin);
 $('#sign-up-btn').click(signup);
@@ -15,8 +14,6 @@ auth.onAuthStateChanged(user => {
 
 		$('.name').html(user.displayName);
 		$('#name-input').val(user.displayName);
-
-		console.log('heyo');
 	}
 	else {
 		$('#sign-in-modal').modal('show');
