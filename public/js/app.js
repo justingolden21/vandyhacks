@@ -24,7 +24,10 @@ function updateStatus(newName, newStatus, newEmoji, newAvailability) {
     $('.availability').html(newAvailability);
 
     db.collection('users').doc(user.uid).update({
-        name: newName
+        name: newName,
+        status: newStatus,
+        emoji: newEmoji,
+        availability: newAvailability
     });
 
     
@@ -39,7 +42,7 @@ $('#sign-in-btn').click( () => {
             name: user.displayName,
             status: ["Chilling in my room", "Studying", "Working", "Sleeping"],
             emoji: ["😎", "😊", "😃", "😄"],
-            availability: ["Available", "Kind of Budy", "Busy", "Away"],
+            availability: ["Available", "Kind of Busy", "Busy", "Away"],
         });
     }
 
