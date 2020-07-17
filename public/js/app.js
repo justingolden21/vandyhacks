@@ -2,8 +2,22 @@ const app = firebase.app();
 const db = firebase.firestore();
 const auth = firebase.auth();
 
+function addStatus(newStatus) {
+	let user = auth.currentUser;
+	let userDoc = db.collection('users').doc(user.uid);
+	userDoc.get().then( (snapshot) => {
+		let statusList = snapshot.data().statusList;
+		statusList.push(newStatus);
+		console.log("List of status: " + statusList);
+		
+		userDoc.update({
+			statusList: statusList
+		});
+	});
+}
+
 function updateStatus(newName, newStatus, newEmoji, newAvailability) {
-	$('.name').html('<b>' + newName + '</bi>');
+	$('.name').html('<b>' + newName + '</b>');
 	$('.status').html('<i>' + newStatus + '</i>');
 	$('.emoji').html(newEmoji);
 	$('.availability').html(newAvailability);
@@ -16,5 +30,7 @@ function updateStatus(newName, newStatus, newEmoji, newAvailability) {
 		availability: newAvailability
 	});
 
+	// To test if addStatus works or not
+	//addStatus('Working out');
 
 }

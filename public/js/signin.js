@@ -14,6 +14,7 @@ auth.onAuthStateChanged(user => {
 
 		$('.name').html(user.displayName);
 		$('#name-input').val(user.displayName);
+
 	}
 	else {
 		$('#sign-in-modal').modal('show');
@@ -36,10 +37,10 @@ function signin(createData=false) {
         if(createData) {
 		    db.collection('users').doc(user.uid).set({
 		        name: user.displayName,
-		        status: 'Chilling',
+		        status: 'Chilling in my room',
 		        emoji: '😎',
 		        availability: 'Available',
-		        // status: ["Chilling in my room", "Studying", "Working", "Sleeping"],
+		    	statusList: ["Chilling in my room", "Studying", "Working", "Sleeping"],
 		        // emoji: ["😎", "😊", "😃", "😄"],
 		        // availability: ["Available", "Kind of Busy", "Busy", "Away"],
 		    });
