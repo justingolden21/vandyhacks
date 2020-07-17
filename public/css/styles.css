@@ -20,8 +20,21 @@ body, .modal-content {
 	background-color: #333;
 }
 
+.btn {
+	color: #fff !important;
+}
+
 .btn-secondary {
 	background-color: #789;
+}
+
+.close {
+	color: #fff;
+	opacity: 1;
+	text-shadow: none;
+}
+.close:hover {
+	color: #fff;
 }
 
 /* top */
