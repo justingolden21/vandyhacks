@@ -2,10 +2,6 @@ $( ()=> {
 
 	$('.toast').toast({delay: 3000}).toast('show');
 
-	$('#logout-btn').click( ()=> {
-		$('#signin-modal').modal('show');
-	});
-
 	$('#profile-div').click( ()=> {
 		$('#account-modal').modal('show');
 	});

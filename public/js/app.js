@@ -30,23 +30,6 @@ function updateStatus(newName, newStatus, newEmoji, newAvailability) {
         availability: newAvailability
     });
 
-    
-        
+
 }
 
-$('#sign-in-btn').click( () => {
-    let user = firebase.auth().currentUser;
-    let userUid = db.collection('users').doc(user.uid);
-    if(userUid != user.uid) {
-        db.collection('users').doc(user.uid).set({
-            name: user.displayName,
-            status: ["Chilling in my room", "Studying", "Working", "Sleeping"],
-            emoji: ["😎", "😊", "😃", "😄"],
-            availability: ["Available", "Kind of Busy", "Busy", "Away"],
-        });
-    }
-
-    $('.name').html("<b>" + user.displayName + "</b>");
-    $('#name-input').val(user.displayName);
-
-});
