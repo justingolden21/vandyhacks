@@ -1,20 +1,26 @@
 const app = firebase.app();
 const db = firebase.firestore();
+<<<<<<< HEAD
 // console.log(firebase);
+=======
+const auth = firebase.auth();
+>>>>>>> 904ab7d71b490f8a0fe31f05983f1d6a40772ca3
 
-function getData(user) {
-    db.collection('users').doc(user.uid).get().then(snapshot=> {
-		console.log(snapshot);
+function updateStatus(newName, newStatus, newEmoji, newAvailability) {
+	$('.name').html('<b>' + newName + '</bi>');
+	$('.status').html('<i>' + newStatus + '</i>');
+	$('.emoji').html(newEmoji);
+	$('.availability').html(newAvailability);
 
-		if(snapshot.data() ) {
-			importData(snapshot.data().savedata);
-		} else {
-			createData(user);
-		}
-
+	let user = auth.currentUser;
+	db.collection('users').doc(user.uid).update({
+		name: newName,
+		status: newStatus,
+		emoji: newEmoji,
+		availability: newAvailability
 	});
-}
 
+<<<<<<< HEAD
 function updateStatus(newName, newStatus, newEmoji, newAvailability) {
     let user = firebase.auth().currentUser;
 
@@ -47,3 +53,7 @@ $('#sign-in-btn').click( () => {
     $('#name-input').val(user.displayName);
 
 });
+=======
+
+}
+>>>>>>> 904ab7d71b490f8a0fe31f05983f1d6a40772ca3

@@ -14,8 +14,30 @@ img, button {
 }
 
 /* general */
+
+body, .modal-content, .toast {
+	color: #fff;
+	background-color: #333;
+}
+
+.btn {
+	color: #fff !important;
+}
+
 .btn-secondary {
 	background-color: #789;
+}
+.btn-primary {
+	background-color: #44a;
+}
+
+.close {
+	color: #fff;
+	opacity: 1;
+	text-shadow: none;
+}
+.close:hover {
+	color: #fff;
 }
 
 /* top */
