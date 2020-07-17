@@ -27,6 +27,9 @@ body, .modal-content, .toast {
 .btn-secondary {
 	background-color: #789;
 }
+.btn-primary {
+	background-color: #44a;
+}
 
 .close {
 	color: #fff;
