@@ -32,3 +32,7 @@ $( ()=> {
 		$('.user-availability-text').html(txt);
 	});
 });
+
+function populateSelect(selectName, optionNames) {
+	$(`#${selectName}`).html(optionNames.map( str => `<option>${str}</option>`) );
+}
