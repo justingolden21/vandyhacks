@@ -1,6 +1,6 @@
 $( ()=> {
 
-	$('.toast').toast({delay: 3000}).toast('show');
+	$('.toast').toast({delay: 30000}).toast('show');
 
 	$('#profile-div').click( ()=> {
 		$('#account-modal').modal('show');
@@ -10,7 +10,7 @@ $( ()=> {
 		let name = $('#name-input').val();
 		let status = $('#status-select').val();
 		let emoji = $('#emoji-select').val();
-		let availability = $('#availabilty-select').val();
+		let availability = $('#availability-select').children('option:selected').html();
 		updateStatus(name, status, emoji, availability);
 	});
 

@@ -15,7 +15,7 @@ img, button {
 
 /* general */
 
-body, .modal-content {
+body, .modal-content, .toast {
 	color: #fff;
 	background-color: #333;
 }
