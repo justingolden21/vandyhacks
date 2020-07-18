@@ -14,6 +14,13 @@ $( ()=> {
 		updateStatus(name, status, emoji, availability);
 	});
 
+	$('#add-status-btn').click( ()=> {
+		$('#add-status-modal').modal('show');
+	});
+	$('#add-status-modal').on('shown.bs.modal', ()=> {
+		$('#add-status-input').focus().select();
+	});
+
 	// ----------------
 
 	const AVAIL_COLOR_CLASSES = {
