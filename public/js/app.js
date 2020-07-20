@@ -2,12 +2,14 @@ const app = firebase.app();
 const db = firebase.firestore();
 const auth = firebase.auth();
 
-function addStatus(newStatus) {
+function addStatus(newStatus, checkbox) {
 	let user = auth.currentUser;
 	let userDoc = db.collection('users').doc(user.uid);
+
+	// Update the status list
 	userDoc.get().then( (snapshot) => {
 		let statusList = snapshot.data().statusList;
-		if(!statusList.includes(newStatus)) {
+		if(!statusList.includes(newStatus) && checkbox != undefined) {
 			statusList.push(newStatus);
 			console.log("List of status: " + statusList);
 			
@@ -15,6 +17,11 @@ function addStatus(newStatus) {
 				statusList: statusList
 			});
 		}
+	});
+
+	// Update current status
+	userDoc.update({
+		status: newStatus
 	});
 }
 

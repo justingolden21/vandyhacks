@@ -30,11 +30,13 @@ $( ()=> {
 		e.preventDefault();
 
 		let newStatusInput = $('#add-status-input');
-		addStatus(newStatusInput.val());
+		let checkbox = $('#add-status-checkbox:checked');
+		addStatus(newStatusInput.val(), checkbox.val());
 		
 		// Clear input field and uncheck the checkbox
 		newStatusInput.val('');
-		$('#add-status-checkbox').prop('checked', false);
+		checkbox.val(undefined);
+		//checkbox.prop('checked', false);
 
 		// Close modal
 		$('#add-status-modal').modal('toggle');
