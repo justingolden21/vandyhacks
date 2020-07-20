@@ -7,12 +7,14 @@ function addStatus(newStatus) {
 	let userDoc = db.collection('users').doc(user.uid);
 	userDoc.get().then( (snapshot) => {
 		let statusList = snapshot.data().statusList;
-		statusList.push(newStatus);
-		console.log("List of status: " + statusList);
-		
-		userDoc.update({
-			statusList: statusList
-		});
+		if(!statusList.includes(newStatus)) {
+			statusList.push(newStatus);
+			console.log("List of status: " + statusList);
+			
+			userDoc.update({
+				statusList: statusList
+			});
+		}
 	});
 }
 
@@ -29,8 +31,19 @@ function updateStatus(newName, newStatus, newEmoji, newAvailability) {
 		emoji: newEmoji,
 		availability: newAvailability
 	});
+}
 
-	// To test if addStatus works or not
-	//addStatus('Working out');
+function getStatusList(user) {
+	let userDoc = db.collection('users').doc(user.uid);
+	userDoc.get().then((snapshot) => {
+		let statusList = snapshot.data().statusList;
+		if (!statusList.includes(newStatus)) {
+			statusList.push(newStatus);
+			console.log("List of status: " + statusList);
 
+			userDoc.update({
+				statusList: statusList
+			});
+		}
+	});	
 }

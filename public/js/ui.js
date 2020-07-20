@@ -12,6 +12,9 @@ $( ()=> {
 		let emoji = $('#emoji-select').val();
 		let availability = $('#availability-select').children('option:selected').html();
 		updateStatus(name, status, emoji, availability);
+
+		// Close modal
+		$('#account-modal').modal('toggle');
 	});
 
 	$('#add-status-btn').click( ()=> {
@@ -19,6 +22,22 @@ $( ()=> {
 	});
 	$('#add-status-modal').on('shown.bs.modal', ()=> {
 		$('#add-status-input').focus().select();
+	});
+
+	// Add new status
+	$('#add-status-form').on('submit', (e) => {
+		// Prevent from refresh on submit 
+		e.preventDefault();
+
+		let newStatusInput = $('#add-status-input');
+		addStatus(newStatusInput.val());
+		
+		// Clear input field and uncheck the checkbox
+		newStatusInput.val('');
+		$('#add-status-checkbox').prop('checked', false);
+
+		// Close modal
+		$('#add-status-modal').modal('toggle');
 	});
 
 	// ----------------
