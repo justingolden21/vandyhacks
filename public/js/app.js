@@ -19,10 +19,14 @@ function addStatus(newStatus, checkbox) {
 		}
 	});
 
-	// Update current status
+	// Update current status in database
 	userDoc.update({
 		status: newStatus
 	});
+
+	// Update current status in profile
+	$('.status').html('<i>' + newStatus + '</i>');
+
 }
 
 function updateStatus(newName, newStatus, newEmoji, newAvailability) {

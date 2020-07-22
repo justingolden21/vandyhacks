@@ -32,7 +32,8 @@ $( ()=> {
 		let newStatusInput = $('#add-status-input');
 		let checkbox = $('#add-status-checkbox:checked');
 		addStatus(newStatusInput.val(), checkbox.val());
-		
+		// $('.status').html('<i>' + newStatus + '</i>');
+
 		// Clear input field and uncheck the checkbox
 		newStatusInput.val('');
 		checkbox.val(undefined);
