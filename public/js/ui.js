@@ -32,12 +32,10 @@ $( ()=> {
 		let newStatusInput = $('#add-status-input');
 		let checkbox = $('#add-status-checkbox:checked');
 		addStatus(newStatusInput.val(), checkbox.val());
-		// $('.status').html('<i>' + newStatus + '</i>');
 
 		// Clear input field and uncheck the checkbox
 		newStatusInput.val('');
-		checkbox.val(undefined);
-		//checkbox.prop('checked', false);
+		checkbox.prop('checked', false);
 
 		// Close modal
 		$('#add-status-modal').modal('toggle');
@@ -46,19 +44,19 @@ $( ()=> {
 	// ----------------
 
 	const AVAIL_COLOR_CLASSES = {
-		avail: 'green',
-		kinda: 'yellow',
-		busy: 'red',
-		away: 'purple'
+		'Available': 'green',
+		'Kind of Busy': 'yellow',
+		'Busy': 'red',
+		'Away': 'purple'
 	};
 
 	$('#availability-select').change( ()=> {
 		let val = $('#availability-select').val();
-		$('.user-dot.dot').removeClass('red yellow green purple').addClass(AVAIL_COLOR_CLASSES[val]);
-
-		let txt = $('#availability-select').children('option:selected').html();
-		console.log(txt);
-		$('.user-availability-text').html(txt);
+		$('#account-modal .user-dot.dot').removeClass('red yellow green purple').addClass(AVAIL_COLOR_CLASSES[val]);
+		
+		// let txt = $('#availability-select').children('option:selected').html();
+		// console.log(txt);
+		// $('.user-availability-text').html(txt);
 	});
 });
 

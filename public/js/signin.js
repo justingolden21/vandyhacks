@@ -15,6 +15,9 @@ auth.onAuthStateChanged(user => {
 		$('.name').html(user.displayName);
 		$('#name-input').val(user.displayName);
 
+		// Display status list
+		displayStatusList();
+		displayProfile();
 	}
 	else {
 		$('#sign-in-modal').modal('show');
