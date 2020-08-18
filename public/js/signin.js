@@ -1,6 +1,6 @@
 let user;
 
-$('#sign-in-btn').click(signin);
+$('#sign-in-btn').click( ()=> signin() ); // so it doesn't pass the event (which is truthy)
 $('#sign-up-btn').click(signup);
 $('#logout-btn').click(signout);
 
