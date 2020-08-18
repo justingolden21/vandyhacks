@@ -4,3 +4,6 @@ error check signin and signup difference
 	if they sign up when account exists, prompt to sign in
 	if they sign in and account doesn't exist, prompt to sign up
 
+use timeago js
+
+consider using vue

@@ -29,6 +29,7 @@ body, .modal-content, .toast {
 }
 .btn-primary {
 	background-color: #44a;
+	border-color: #339;
 }
 
 .close {
@@ -79,12 +80,13 @@ body, .modal-content, .toast {
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	background-color: #e6e6e6;
-	/*border-top: 2px solid #999;*/
+	background-color: #333;
+	border-top: 2px solid #999;
 }
 
 #footer {
-	background-color: #e6e6e6;
+	color: #e6e6e6;
+	background-color: #333;
 }
 
 #profile-div { 

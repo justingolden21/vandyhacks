@@ -16,7 +16,6 @@ function displayStatusList(newStatus = null) {
 		let status = snapshot.data().status;
 		let emoji = snapshot.data().emoji;
 		let availability = snapshot.data().availability;
-		$('#status-select').html('');
 		populateSelect('status-select', statusList);
 
 		if(newStatus == null) {
