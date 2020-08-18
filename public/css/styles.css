@@ -50,6 +50,11 @@ body, .modal-content, .toast {
 	z-index: 99;
 }
 
+/*status update*/
+#status-edit-btn, #status-select, #status-add-btn {
+	/*display: inline !important;*/
+}
+
 /* dots */
 
 .dot {

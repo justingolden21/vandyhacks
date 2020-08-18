@@ -240,12 +240,27 @@
 					<input id="name-input" class="form-control" type="text" value="John Doe">
 
 					<br>
-					<label for="status-select" class="mt-4 mr-3">Status</label>
-					<select id="status-select" class="form-control w-50 d-inline mr-3"></select>
-					<button id="add-status-btn" class="btn btn-secondary d-inline"><i class="fas fa-plus"></i></button>
 
+					Status
+					<div class="btn-group btn-group-toggle ml-3 mb-3" data-toggle="buttons">
+						<label class="btn btn-sm btn-secondary active">
+							<input type="radio" id="quick-list-option" autocomplete="off" checked> Quick List
+						</label>
+						<label class="btn btn-sm btn-secondary">
+							<input type="radio" id="custom-status-option" autocomplete="off"> Custom Status
+						</label>
+					</div>
+
+					<!-- <label for="status-select" class="mt-4 mr-3">Status</label> -->
+					<select id="status-select" class="form-control w-50 mr-3"></select>
 					<!-- edit your list of statuses (rename, remove, drag, etc) -->
-					<button class="btn btn-secondary d-inline"><i class="fas fa-edit"></i></button>
+					<button id="status-edit-btn" class="btn btn-secondary"><i class="fas fa-edit"></i></button>
+
+					<input id="add-status-input" name="status" class="form-control w-50 mr-3" type="text" required>
+					<div id="add-status-checkbox-div" class="custom-control custom-checkbox my-3">
+						<input type="checkbox" class="custom-control-input" id="add-status-checkbox">
+						<label class="custom-control-label" for="add-status-checkbox">Add to quick list</label>
+					</div>
 
 					<br>
 					<label for="emoji-select" class="mt-4 mr-3">Emoji</label>
@@ -271,30 +286,6 @@
 					<button data-dismiss="modal" class="btn btn-danger m-3">Discard <i class="fas fa-times"></i></button>
 					<button id="update-btn" class="btn btn-success m-3">Update <i class="fas fa-check"></i></button>
 				</div>
-			</div>
-		</div>
-	</div>
-
-	<div id="add-status-modal" class="modal fade">
-		<div class="modal-dialog modal-lg">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h3 class="modal-title"><i class="fas fa-plus"></i> Add Status</h3>
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-				</div>
-				<form id="add-status-form">
-					<div class="modal-body">
-						<input id="add-status-input" name="status" class="form-control" type="text" required>
-						<div class="custom-control custom-checkbox my-3">
-							<input type="checkbox" class="custom-control-input" id="add-status-checkbox">
-							<label class="custom-control-label" for="add-status-checkbox">Add status to my quick list for future convenience</label>
-						</div>
-					</div>
-					<div class="modal-footer">
-						<button data-dismiss="modal" class="btn btn-danger m-3">Discard <i class="fas fa-times"></i></button>
-						<button id="add-status-add-btn" class="btn btn-success m-3">Update <i class="fas fa-check"></i></button>
-					</div>
-				</form>
 			</div>
 		</div>
 	</div>
